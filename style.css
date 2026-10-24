@@ -23,6 +23,7 @@ body{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;c
 .active .at0 .rv,.active .at0.rv,.s1 .at1 .rv,.s1 .at1.rv,.s2 .at2 .rv,.s2 .at2.rv{animation:up .7s var(--ease) var(--d,0s) both}
 .rv.pop{transform-origin:center}
 .active .at0 .rv.pop,.active .at0.rv.pop,.s1 .at1 .rv.pop,.s1 .at1.rv.pop,.s2 .at2 .rv.pop,.s2 .at2.rv.pop{animation-name:pop}
+.active .at0 .rv.fade,.active .at0.rv.fade,.s1 .at1 .rv.fade,.s1 .at1.rv.fade,.s2 .at2 .rv.fade,.s2 .at2.rv.fade{animation-name:fadeIn}
 @keyframes up{from{opacity:0;transform:translateY(28px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
 @keyframes pop{0%{opacity:0;transform:scale(.4)}70%{opacity:1;transform:scale(1.08)}100%{opacity:1;transform:scale(1)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
@@ -400,6 +401,12 @@ body{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;c
 .lvl.big{background:linear-gradient(90deg,rgba(245,165,36,.14),rgba(245,165,36,.03));border-color:rgba(245,165,36,.4)}
 .lvl.big .lvltag{background:var(--amber);color:#1a1206}
 .lvlar{text-align:center;font-size:44px;font-weight:900;color:var(--gray)}
+
+/* ---------- 실제 캡쳐화면 ---------- */
+.shotwrap{position:absolute;inset:0;z-index:15;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;background:rgba(10,12,16,.82);border-radius:28px;animation-duration:.9s}
+.shotlabel{font-size:24px;font-weight:800;color:var(--amber);letter-spacing:.02em}
+.shot{width:600px;max-height:760px;border-radius:18px;overflow:hidden;border:3px solid var(--line);box-shadow:0 30px 90px rgba(0,0,0,.55);background:#fff}
+.shot img{display:block;width:100%;height:auto}
 
 /* ---------- chrome ---------- */
 #prog{position:absolute;left:0;bottom:0;height:5px;background:var(--amber);transition:width .5s var(--ease);z-index:20}
